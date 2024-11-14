@@ -34,6 +34,9 @@ let songs = [
         filePath: "songs/5.mp3",
         coverPath:"covers/5.jpg",
      },
+    
+   
+   
 ];  
 
 songItems.forEach((element, i) => {
@@ -60,8 +63,8 @@ masterPlay.addEventListener("click", () => {
 //listen to event
 
 audioElement.addEventListener("timeupdate" , () =>{
-    progess = parseInt((audioElement.currentTime / audioElement.duration)* 100);
-    myProgressBar.value = progress;
+   let progess = parseInt((audioElement.currentTime / audioElement.duration)* 100);
+    myProgressBar.value = progess;
     console.log("timeupdate");
 });
 
